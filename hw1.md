@@ -95,7 +95,7 @@ Swift
 <i>Used:
 https://math.stackexchange.com/questions/2057729/prove-or-disprove-if-r-and-s-are-partial-order-relations-on-a-set-a-then-r-c to help answer this question. </i>
 
-<li><h3>Let f=λx.2x+1 and g=λx.λy.3xy. Reduce each of the following expressions (or if they cannot be reduced, say why):
+<li><h3>Let f=λx.2x+1 and g=λx.λy.3xy. Reduce each of the following expressions (or if they cannot be reduced, say why):</h3>
 
 <ol style = 'list-style-type: lower-latin;'>
     <li>f5(20) => 671
@@ -147,19 +147,19 @@ https://math.stackexchange.com/questions/2057729/prove-or-disprove-if-r-and-s-ar
 
 ![Q8 Answer](./assets/8.png)
 
-<br><li>In classical logic, ∃ and ∀ are duals of each other, because (¬∃x.P)≡∀x.¬P and (¬∀x.P)≡∃x.¬P. Are the temporal operators F and G duals of each other? Why or why not?
+<br><li><h3>In classical logic, ∃ and ∀ are duals of each other, because (¬∃x.P)≡∀x.¬P and (¬∀x.P)≡∃x.¬P. Are the temporal operators F and G duals of each other? Why or why not?</h3>
 
 <p>Yes, F and G are duals of each other and hold true for the same cases as ∃ and ∀. In the same way in which ∃ and ∀ relate to a possible existance and a necessary existance, F and G relate to the same premise and ideas respectively. The case ¬F(e)≡G(¬e) holds true because in the case which a particalar event [e] will not happen at any point in the future [¬F(e)] is the same as saying that it will forever be the case that said particular event does not happen [G(¬e)]. Vis Versa holds true for ¬G(e)≡F(¬e) because if it will not forever be the case where a particular event [e] happens [¬G(e)], is the same as saying it will at some point be the case in which the particular event [e] doesn't happen [F(¬e)].</p>
 
-<li>Suppose that you had a classical, bivalent logistic system powerful enough to express statements about the provability of its own formulas, for example, “This formula is not provable” or equivalently “I am not provable.” Show that such a system, if consistent, must be incomplete, and if complete, must be inconsistent.
+<li><h3>Suppose that you had a classical, bivalent logistic system powerful enough to express statements about the provability of its own formulas, for example, “This formula is not provable” or equivalently “I am not provable.” Show that such a system, if consistent, must be incomplete, and if complete, must be inconsistent.</h3>
 
 <p>
 Consider a logic system with the potential to express statements about the provability of its own formulas.
 
-<b>If the statement 'I am not provable' is true, then for the system to be consistent, the statement 'I am provable' must be false. This would lead to a true value in the case of verifying the second statement. However, in the case that both of these statements are true, the truth values would create a contradiction leading to an inconsistent system.
+If the statement 'I am not provable' is true, then for the system to be consistent, the statement 'I am provable' must be false. This would lead to a true value in the case of verifying the second statement. However, in the case that both of these statements are true, the truth values would create a contradiction leading to an inconsistent system.
 
 If the statement 'I am not provable' is false, there exists additional systems that must have been used to verify the truth of this statement.
-These systems having not been included in the original system implies the incompleteness of that system.</b>
+These systems having not been included in the original system implies the incompleteness of that system.
 
 </p>
 
