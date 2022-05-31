@@ -17,13 +17,23 @@
 
 <h3>2. Characterize the following languages in set-theoretic notation:
 <ol style = 'list-style-type: lower-latin;'>
-    <li> Binary numerals in which 1s never appear together, but only with at least two 0s between them <u>{w ∈ {1, 0}^* | 0*(100+)*0*}</u>
+    <li> Binary numerals in which 1s never appear together, but only with at least two 0s between them <u>{w ∈ {0, 1}* | 0*(100⁺)*0*}</u>
     <li>The language of Pythagorean triples, written as decimal numerals, where the three values are separated by commas<u>{}</u>
     <li>All strings over the alphabet a,b,c,d,e where the symbols are in decreasing alphabetic order<u>{x ∈ {a,b,c,d,e} | }</u>
 </ol>
 </h3>
 
-<h3>3. Here’s another look at the grammar for floating-point numerals (using single-letter variables for compactness):</h3>
+<h3>3. Give grammars for the following, using the list-of-rules notation from class:
+<ol style = 'list-style-type: lower-latin;'>
+    <li> The empty language <u>ans</u>
+    <li> {0ⁱ1ʲ2ᵏ | i=j ∨ j=k} <u>ans</u>
+    <li>{w ∈ {0,1}* | w does not contain the substring 000}<u>ans</u>
+    <li>{w ∈ {a,b}* | w has twice as many a's as b's}<u>ans</u>
+    <li>{aⁿbⁿaⁿbⁿ | n≥0}<u>ans</u>
+</ol>
+</h3>
+
+<h3>4. Here’s another look at the grammar for floating-point numerals (using single-letter variables for compactness):</h3>
 
 ```Java
 n = d+ f? e?
