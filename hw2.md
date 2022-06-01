@@ -20,17 +20,36 @@
 <ol style = 'list-style-type: lower-latin;'>
     <li> Binary numerals in which 1s never appear together, but only with at least two 0s between them <u>{w ∈ {0, 1}* | 0*(100⁺)*0*}</u>
     <li>The language of Pythagorean triples, written as decimal numerals, where the three values are separated by commas<u>{(x, y, x²+y²) | x,y,x²+y² ∈ ℕ ∧ (x>0 ∧ y>0)}</u>
-    <li>All strings over the alphabet a,b,c,d,e where the symbols are in decreasing alphabetic order<u>{x ∈ {a,b,c,d,e} | a*b*c*d*e*}</u>
+    <li>All strings over the alphabet a,b,c,d,e where the symbols are in decreasing alphabetic order<u>{x ∈ {a,b,c,d,e} | a*b*c*d*e*} or {aʰbⁱcʲdᵏeˡ | h,i,j,k,l ≥ 0}</u>
 </ol>
 </h3>
 
 <h3>3. Give grammars for the following, using the list-of-rules notation from class:
 <ol style = 'list-style-type: lower-latin;'>
-    <li> The empty language <u>ans</u>
-    <li> {0ⁱ1ʲ2ᵏ | i=j ∨ j=k} <u>ans</u>
-    <li>{w ∈ {0,1}* | w does not contain the substring 000}<u>ans</u>
-    <li>{w ∈ {a,b}* | w has twice as many a's as b's}<u>ans</u>
-    <li>{aⁿbⁿaⁿbⁿ | n≥0}<u>ans</u>
+    <li> The empty language 
+    ```
+    s → "∅" | s
+    ```
+    <li> {0ⁱ1ʲ2ᵏ | i=j ∨ j=k}
+    ```
+    numeral → first
+    first   → 0
+    ```
+    <!--
+    𝜀, 01, 12, 012, 0011, 000111, 111222, 000111222
+    -->
+    <li>{w ∈ {0,1}* | w does not contain the substring 000}
+    <li>{w ∈ {a,b}* | w has twice as many a's as b's}
+    ```
+    w      → before | after
+    before → aa (before|after) b | 𝜀
+    after  → b (before|after) aa | 𝜀
+    ```
+    <li>{aⁿbⁿaⁿbⁿ | n≥0}
+    ```
+    
+    ```
+    
 </ol>
 </h3>
 
