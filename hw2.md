@@ -12,14 +12,15 @@
     <li> L_1 ∩ L_2 <u>{10}</u>
     <li> L_1L_2 <u>{010, 01, 01110, 0111, 1010, 101}</u>
     <li> L_2^∗ <u>{𝜀, 10, 1, 1010, 101, 110, 11, 101010, 10101, 10110, 1011, 11010, 1101, 1110, 111, ...}</u>
+    <!-- L2 = {a,b} = {empty, a, b, aa, ab, ba, bb, aaa, aab, aba, abb, baa, bab, bba, bbb} -->
 </ol>
 </h3>
 
 <h3>2. Characterize the following languages in set-theoretic notation:
 <ol style = 'list-style-type: lower-latin;'>
     <li> Binary numerals in which 1s never appear together, but only with at least two 0s between them <u>{w ∈ {0, 1}* | 0*(100⁺)*0*}</u>
-    <li>The language of Pythagorean triples, written as decimal numerals, where the three values are separated by commas<u>{}</u>
-    <li>All strings over the alphabet a,b,c,d,e where the symbols are in decreasing alphabetic order<u>{x ∈ {a,b,c,d,e} | }</u>
+    <li>The language of Pythagorean triples, written as decimal numerals, where the three values are separated by commas<u>{(x, y, x²+y²) | x,y,x²+y² ∈ ℕ ∧ (x>0 ∧ y>0)}</u>
+    <li>All strings over the alphabet a,b,c,d,e where the symbols are in decreasing alphabetic order<u>{x ∈ {a,b,c,d,e} | a*b*c*d*e*}</u>
 </ol>
 </h3>
 
