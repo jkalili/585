@@ -148,8 +148,7 @@ space   → " " | "\t" | "\r" | "\n"
 n : num
 i : id
 c : char
-s : string  =  "c*"
-e : Exp     =  i | n | s | c | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | i e*
+e : Exp     =  i | n | "c*" | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | i e*
 d : Dec     =  i = i* ⇒ e
 p : Pro     =  d* e
 ```
