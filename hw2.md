@@ -44,10 +44,6 @@
     break -> "1" char | 𝜀
 
 <li>{w ∈ {a,b}* | w has twice as many a's as b's}
-    
-    w      → before | after
-    before → aa (before|after) b | 𝜀
-    after  → b (before|after) aa | 𝜀
 
     w → z "aab" | "a" z "ab" | "aa" z "b" | "aab" z
       | z "aba" | "a" z "ba" | "ab" z "a" | "aba" z
@@ -78,10 +74,6 @@ e = ("E" | "e") ("+" | "-")? d+
 d = "0" .. "9"
 ```
 
-    ({variables (vocab) set},
-    {alphabet set},
-    {rules set},n)
-
 <h3>Give the (V,Σ,R,S)-definition of this grammar. (Note this means you will have to desugar the rules with |, ?, and +.)</h3>
 
 ```
@@ -89,25 +81,36 @@ d = "0" .. "9"
     ({n, f, c, d},
     {𝜀, ., E, e, +, -, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
     {
-        (n, dfc),
-        (f, .d),
+        (n, zdfc),
+        (f, .zd),
         (f, 𝜀),
-        (c, Ead),
-        (c, ead),
+        (c, Eazd),
+        (c, eazd),
+        (c, 𝜀),
         (a, +),
         (a, -),
         (a, 𝜀),
-        (0d, d),
-        (1d, d),
-        (2d, d),
-        (3d, d),
-        (4d, d),
-        (5d, d),
-        (6d, d),
-        (7d, d),
-        (8d, d),
-        (9d, d),
-        (d, 𝜀)
+        (d, 0d),
+        (d, 1d),
+        (d, 2d),
+        (d, 3d),
+        (d, 4d),
+        (d, 5d),
+        (d, 6d),
+        (d, 7d),
+        (d, 8d),
+        (d, 9d),
+        (d, 𝜀),
+        (z, 0),
+        (z, 1),
+        (z, 2),
+        (z, 3),
+        (z, 4),
+        (z, 5),
+        (z, 6),
+        (z, 7),
+        (z, 8),
+        (z, 9),
     },
     n)
 ```
@@ -136,7 +139,7 @@ char    → "\x00".."\x21"
         | "\x23".."\x5b"
         | "\x5d".."\x10ffff"
         | "\\" ("'" | "\"" | "\\" | "n" | "u{" h h? h? h? h? h? "}")
-h     → (digit | hexDigit)
+h       → (digit | hexDigit)
 space   → " " | "\t" | "\r" | "\n"
 ```
 
@@ -145,9 +148,9 @@ space   → " " | "\t" | "\r" | "\n"
 <p>Spec:</p>
 
 ```
-n : num
-i : id
-ch: char
+n : Nml
+i : Ide
+ch: Cha
 e : Exp     =  i | n | "ch*" | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | c
 c : Call    =  i e*
 d : Dec     =  i = i* ⇒ e
