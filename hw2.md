@@ -114,7 +114,7 @@ d = "0" .. "9"
 
 <h3>5. Give a programming langauge grammar, using the notation from class, for the programming language described as follows. Programs are made up of a possibly empty sequence of function declarations, followed by a single expression. Each function declaration is of the form f=(p1,…,pm)⇒e where f is the function name (an identifier), each pi is a parameter (also identifiers) and the result (the “body”) is an expression. Expressions can be numeric literals, string literals, identifiers, function calls, or can be made up of other expressions with the usual binary arithmetic operators (plus, minus, times, divide, remainder) and a unary prefix negation and a unary postfix factorial (!). There’s a conditional expression with the syntax x ? y : z. Parentheses are used, as in most other languages, to group subexpressions. Numeric literals are non-empty sequences of decimal digits with an optional fractional part and an optional exponent part. String literals delimited with double quotes with the escape sequences \', \", \n, \\, and \u{hhhhhh} where hhhhhh is a sequence of one-to-six hexadecimal digits. Identifiers are non-empty sequences of letters, decimal digits, underscores, and dollar signs, beginning with a letter or dollar sign. Function calls are formed with an identifier followed by a parenthesized, comma-separated list of expressions.</h3>
 
-<p>The programming language</p>
+<p>The grammar:</p>
 
 ```
 Prog    → Dec* Exp
@@ -142,7 +142,17 @@ space   → " " | "\t" | "\r" | "\n"
 
 <h3>6. For the language in the previous problem, write an abstract syntax specification </h3>
 
-<p>picture here</p>
+<p>Spec:</p>
+
+```
+n : num
+i : id
+c : char
+s : string  =  "c*"
+e : Exp     =  i | n | s | c | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | i e*
+d : Dec     =  i = i* ⇒ e
+p : Pro     =  d* e
+```
 
 <h3>7. For the language in the previous problem, give an abstract syntax tree for the program:</h3>
 
