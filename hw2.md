@@ -125,7 +125,7 @@ Exp     → num
         | string
         | Call
         | "-" Exp
-        | Exp ("+" | "-" | "*" | "/" | "%") Exp
+        | Exp ("+" | "-" | "*" | "/" | "%" | "**") Exp
         | Exp "!"
         | Exp "?" Exp ":" Exp
         | "(" Exp ")"
@@ -136,7 +136,15 @@ char    → "\x00".."\x21"
         | "\x23".."\x5b"
         | "\x5d".."\x10ffff"
         | "\\" ("'" | "\"" | "\\" | "n" | "u{" hex "}")
-hex     → (digit | hexDigit)..(digit | hexDigit)⁶
+
+
+hex     → (digit | hexDigit) hex1
+hex1    → (digit | hexDigit) hex2 | 𝜀
+hex2    → (digit | hexDigit) hex3 | 𝜀
+hex3    → (digit | hexDigit) hex4 | 𝜀
+hex4    → (digit | hexDigit) hex5 | 𝜀
+hex5    → (digit | hexDigit)
+space   → " " | "\t" | "\r" | "\n"
 ```
 
 <h3>6. For the language in the previous problem, write an abstract syntax specification </h3>
