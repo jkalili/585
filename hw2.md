@@ -151,8 +151,7 @@ space   → " " | "\t" | "\r" | "\n"
 n : Nml
 i : Ide
 ch: Cha
-e : Exp     =  i | n | "ch*" | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | c
-c : Call    =  i e*
+e : Exp     =  i | n | "ch*" | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | i e*
 d : Dec     =  i = i* ⇒ e
 p : Pro     =  d* e
 ```
