@@ -135,15 +135,8 @@ string  → "\"" char* "\""
 char    → "\x00".."\x21"
         | "\x23".."\x5b"
         | "\x5d".."\x10ffff"
-        | "\\" ("'" | "\"" | "\\" | "n" | "u{" hex "}")
-
-
-hex     → (digit | hexDigit) hex1
-hex1    → (digit | hexDigit) hex2 | 𝜀
-hex2    → (digit | hexDigit) hex3 | 𝜀
-hex3    → (digit | hexDigit) hex4 | 𝜀
-hex4    → (digit | hexDigit) hex5 | 𝜀
-hex5    → (digit | hexDigit)
+        | "\\" ("'" | "\"" | "\\" | "n" | "u{" h h? h? h? h? h? "}")
+h     → (digit | hexDigit)
 space   → " " | "\t" | "\r" | "\n"
 ```
 
