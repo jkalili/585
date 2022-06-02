@@ -147,8 +147,9 @@ space   → " " | "\t" | "\r" | "\n"
 ```
 n : num
 i : id
-c : char
-e : Exp     =  i | n | "c*" | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | i e*
+ch: char
+e : Exp     =  i | n | "ch*" | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | c
+c : Call    =  i e*
 d : Dec     =  i = i* ⇒ e
 p : Pro     =  d* e
 ```
@@ -161,4 +162,4 @@ cube = (x) => x * x * x
 "The answer is" + cube(gcd(30, 4!)) + "😦😦"
 ```
 
-<p>picture here</p>
+![Q7 Answer](./assets/hw2_7.PNG)
