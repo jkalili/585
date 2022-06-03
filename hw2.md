@@ -8,17 +8,18 @@
 
 <h3>1. Given L1={0,011,10} and L2={10,1}. What are:
 <ol style = 'list-style-type: lower-latin;'>
-    <li> L_1 ∪ L_2 <br><u>{0, 1, 10, 011}</u>
-    <li> L_1 ∩ L_2 <br><u>{10}</u>
-    <li> L_1L_2 <br><u>{010, 01, 01110, 0111, 1010, 101}</u>
-    <li> L_2^∗ <br><u>{𝜀, 10, 1, 1010, 101, 110, 11, 101010, 10101, 10110, 1011, 11010, 1101, 1110, 111, ...}</u>
+    <li> L_1 ∪ L_2 =<br><u>{0, 1, 10, 011}</u>
+    <li> L_1 ∩ L_2 =<br><u>{10}</u>
+    <li> L_1L_2 =<br><u>{010, 01, 01110, 0111, 1010, 101}</u>
+    <li> L_2^∗ =<br><u>{𝜀, 10, 1, 1010, 101, 110, 11, 101010, 10101, 10110, 1011, 11010, 1101, 1110, 111, ...}</u>
     <!-- L2 = {a,b} = {empty, a, b, aa, ab, ba, bb, aaa, aab, aba, abb, baa, bab, bba, bbb} -->
 </ol>
 </h3>
 
 <h3>2. Characterize the following languages in set-theoretic notation:
 <ol style = 'list-style-type: lower-latin;'>
-    <li> Binary numerals in which 1s never appear together, but only with at least two 0s between them <br><u>{w ∈ {0, 1}* | w is a binary string in which 1s never appear together, but only with at least two 0s between them} or {w | 11 not in w and 101 not in w} (using python)</u>
+    <li> Binary numerals in which 1s never appear together, but only with at least two 0s between them <br><u>{w ∈ {0, 1}* | w is a binary string in which 1s never appear together, but only with at least two 0s between them}</u>
+    <!-- or {w | 11 not in w and 101 not in w} (using python) -->
     <li>The language of Pythagorean triples, written as decimal numerals, where the three values are separated by commas <br><u>{(x, y, z) | x²+y²=z² ∧ x,y,z ∈ ℕ}</u>
     <li>All strings over the alphabet a,b,c,d,e where the symbols are in decreasing alphabetic order <br><u>{aʰbⁱcʲdᵏeˡ | h,i,j,k,l ≥ 0}</u>
 </ol>
@@ -28,7 +29,9 @@
 <ol style = 'list-style-type: lower-latin;'>
 <li> The empty language 
  
-    s → s or there are no rules or (V,Σ,R,S) = ({s}, {a,b}, ∅, {s})
+    s → s 
+    there are no rules
+    (V,Σ,R,S) = ({s}, {a,b}, ∅, {s})
     
 <li> {0ⁱ1ʲ2ᵏ | i=j ∨ j=k}
 
