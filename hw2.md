@@ -46,7 +46,7 @@
 
 <li>{w ∈ {a,b}* | w has twice as many a's as b's}
 
-     w → ε | ... | ... | ... | ww
+     w → ε | "b" w "a" w "a" | "a" w "b" w "a" | "a" w "a" w "b" | ww
 
 <li>{aⁿbⁿaⁿbⁿ | n≥0}
 
@@ -60,8 +60,6 @@
 
 </ol>
 </h3>
-
-<!-- w → ε | "b" w "a" w "a" | "a" w "b" w "a" | "a" w "a" w "b" | ww -->
 
 <h3>4. Here’s another look at the grammar for floating-point numerals (using single-letter variables for compactness):</h3>
 
