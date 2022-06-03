@@ -27,12 +27,10 @@
 
 <h3>3. Give grammars for the following, using the list-of-rules notation from class:
 <ol style = 'list-style-type: lower-latin;'>
-<li> The empty language 
- 
-    s → s 
+<li> The empty language
+
     there are no rules
-    (V,Σ,R,S) = ({s}, {a,b}, ∅, {s})
-    
+
 <li> {0ⁱ1ʲ2ᵏ | i=j ∨ j=k}
 
     s   → e01 "2"* | "0"* e12
@@ -41,17 +39,14 @@
 
 <li>{w ∈ {0,1}* | w does not contain the substring 000}
     
-    s -> char
+    s -> char | 𝜀
     char -> "0" zero | "1" char
     zero -> "0" break | "1" char
     break -> "1" char | 𝜀
 
 <li>{w ∈ {a,b}* | w has twice as many a's as b's}
 
-    w → z "aab" | "a" z "ab" | "aa" z "b" | "aab" z
-      | z "aba" | "a" z "ba" | "ab" z "a" | "aba" z
-      | z "baa" | "b" z "aa" | "ba" z "a" | "baa" z
-    z → w | ε
+    w → ε | "b" w "a" w "a" | "a" w "b" w "a" | "a" w "a" w "b" | ww
 
 <li>{aⁿbⁿaⁿbⁿ | n≥0}
 
@@ -62,8 +57,6 @@
     x "a"  → "a" x
     l      → ε
     r      → ε
-
-    Context Sensitive one
 
 </ol>
 </h3>
@@ -81,7 +74,8 @@ d = "0" .. "9"
 
 ```
 *NOTE* -> replace variable e with c (since e is in the alphabet)
-    ({n, f, c, d},
+(
+    {n, f, c, d},
     {𝜀, ., E, e, +, -, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
     {
         (n, zdfc),
@@ -115,7 +109,8 @@ d = "0" .. "9"
         (z, 8),
         (z, 9),
     },
-    n)
+    n
+)
 ```
 
 <h3>5. Give a programming langauge grammar, using the notation from class, for the programming language described as follows. Programs are made up of a possibly empty sequence of function declarations, followed by a single expression. Each function declaration is of the form f=(p1,…,pm)⇒e where f is the function name (an identifier), each pi is a parameter (also identifiers) and the result (the “body”) is an expression. Expressions can be numeric literals, string literals, identifiers, function calls, or can be made up of other expressions with the usual binary arithmetic operators (plus, minus, times, divide, remainder) and a unary prefix negation and a unary postfix factorial (!). There’s a conditional expression with the syntax x ? y : z. Parentheses are used, as in most other languages, to group subexpressions. Numeric literals are non-empty sequences of decimal digits with an optional fractional part and an optional exponent part. String literals delimited with double quotes with the escape sequences \', \", \n, \\, and \u{hhhhhh} where hhhhhh is a sequence of one-to-six hexadecimal digits. Identifiers are non-empty sequences of letters, decimal digits, underscores, and dollar signs, beginning with a letter or dollar sign. Function calls are formed with an identifier followed by a parenthesized, comma-separated list of expressions.</h3>
@@ -142,7 +137,7 @@ char    → "\x00".."\x21"
         | "\x23".."\x5b"
         | "\x5d".."\x10ffff"
         | "\\" ("'" | "\"" | "\\" | "n" | "u{" h h? h? h? h? h? "}")
-h       → (digit | hexDigit)
+h       → hexDigit
 space   → " " | "\t" | "\r" | "\n"
 ```
 
@@ -153,8 +148,8 @@ space   → " " | "\t" | "\r" | "\n"
 ```
 n : Nml
 i : Ide
-ch: Cha
-e : Exp     =  i | n | "ch*" | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | i e*
+s : Str
+e : Exp     =  i | n | s | -e | e! | e+e | e-e | e*e | e/e | e%e | e**e | e?e:e | i e*
 d : Dec     =  i = i* ⇒ e
 p : Pro     =  d* e
 ```
