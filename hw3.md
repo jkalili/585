@@ -6,7 +6,9 @@
 
 ## Problem Set
 
-<h3>1. Problem 1.4.3 in Slonneger and Kurtz
+![Wren Rules](./assets/hw3/wren_ast_rules.png)
+
+<h3>1. Problem 1.4.3 in Slonneger and Kurtz -
 
 Draw an abstract syntax tree for the following Wren program:</h3>
 
@@ -24,7 +26,17 @@ begin
 end
 ```
 
-<h3>2. Problem 5.1.1 in Slonneger and Kurtz</h3>
+<h3>2. Problem 5.1.1 in Slonneger and Kurtz -
+
+Correctly parenthesize each of these lambda expressions:
+
+<ol style = 'list-style-type: lower-latin;'>
+    <li> λx . x λy . y x <br><u>ans</u>
+    <li> (λx . x) (λy . y) λx . x (λy . y) z <br><u>ans</u>
+    <li> (λf . λy . λz . f z y z) p x <br><u>ans</u>
+    <li> λx . x λy . y λz . z λw . w z y x <br><u>ans</u>
+</ol>
+</h3>
 
 <h3>3. Problem 5.1.2 in Slonneger and Kurtz</h3>
 
