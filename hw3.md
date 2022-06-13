@@ -26,6 +26,8 @@ begin
 end
 ```
 
+![Q1 Answer](.assests/hw3/1.png)
+
 <h3>2. Problem 5.1.1 in Slonneger and Kurtz -
 
 Correctly parenthesize each of these lambda expressions:
