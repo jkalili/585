@@ -45,11 +45,24 @@ Correctly parenthesize each of these lambda expressions:
 Find the set of free variables for each of the following lambda expressions:
 
 <ol style = 'list-style-type: lower-latin;'>
-    <li> λx. x y λz. x z <br><u>ans</u>
-    <li> (λx. x y) λz. w λw. w z y x <br><u>ans</u>
-    <li> x λz. x λw. w z y <br><u>ans</u>
-    <li> λx. x y λx. y x <br><u>ans</u> 
+  <li> λx. x y λz. x z <br>
+
+![Q2 Answer](./assets/hw3/2.1.png)
+
+  <li> (λx. x y) λz. w λw. w z y x <br>
+
+![Q2 Answer](./assets/hw3/2.2.png)
+
+  <li> x λz. x λw. w z y <br><u>ans</u>
+
+![Q2 Answer](./assets/hw3/2.3.png)
+
+  <li> λx. x y λx. y x <br><u>ans</u>
+
+![Q2 Answer](./assets/hw3/2.4.png)
+
 </ol>
+
 </h3>
 
 <h3>4. Problem 5.1.3 in Slonneger and Kurtz -
