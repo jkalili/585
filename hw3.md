@@ -131,14 +131,6 @@ _______________________
 repeat c until be : cmd
 ```
 
-b.
-
-```
-      c : cmd ie : iexp
-____________________________
-begin c return ie end : iexp
-```
-
 c.
 
 ```
