@@ -47,19 +47,19 @@ Find the set of free variables for each of the following lambda expressions:
 <ol style = 'list-style-type: lower-latin;'>
   <li> λx. x y λz. x z <br>
 
-![Q2 Answer](./assets/hw3/2.1.png)
+![Q2 Answer](./assets/hw3/2.1.PNG)
 
   <li> (λx. x y) λz. w λw. w z y x <br>
 
-![Q2 Answer](./assets/hw3/2.2.png)
+![Q2 Answer](./assets/hw3/2.2.PNG)
 
   <li> x λz. x λw. w z y <br>
 
-![Q2 Answer](./assets/hw3/2.3.png)
+![Q2 Answer](./assets/hw3/2.3.PNG)
 
   <li> λx. x y λx. y x <br>
 
-![Q2 Answer](./assets/hw3/2.4.png)
+![Q2 Answer](./assets/hw3/2.4.PNG)
 
 </ol>
 
@@ -89,7 +89,7 @@ Use call by value semantics to reduce the following lambda expressions:
 
   <li> (λx . λf . f (f x)) ((λy . (add y 2)) ((λz . (sqr z)) ((λy . (succ y)) 1))) sqr <br>
 
-![Q5B Answer](./assets/hw3/5B.png)
+![Q5B Answer](./assets/hw3/5b.png)
 
 </ol>
 </h3>
