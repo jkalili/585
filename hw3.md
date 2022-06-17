@@ -164,4 +164,6 @@ Extend Wren to include a definite iteration command of the form:
 
 whose informal semantics agrees with the for command in Pascal. Add inference rules to the structural operational semantics of Wren to give a formal semantics for this new command.
 
+![Q10 Answer](./assets/hw3/10.png)
+
 </h3>
