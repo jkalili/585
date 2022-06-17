@@ -142,11 +142,15 @@ _______________________
 repeat c until be : cmd
 ```
 
+![Q9a Answer](./assets/hw3/9A.png)
+
 c.
 
 ```
 swap (id₁,id₂) : cmd      id₁,id₂∈Id
 ```
+
+![Q9b Answer](./assets/hw3/9b.png)
 
 <h3>10. Problem 8.6.6 in Slonneger and Kurtz -
 
