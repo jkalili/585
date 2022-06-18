@@ -85,7 +85,7 @@ Use call by value semantics to reduce the following lambda expressions:
 
   <li> (λf . f add (f mul (f add 5))) (λg . λx . (g x) x) <br>
 
-![Q5A Answer](./assets/hw3/5A.png)
+![Q5A Answer](./assets/hw3/5a.PNG)
 
   <li> (λx . λf . f (f x)) ((λy . (add y 2)) ((λz . (sqr z)) ((λy . (succ y)) 1))) sqr <br>
 
