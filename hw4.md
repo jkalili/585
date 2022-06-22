@@ -124,7 +124,7 @@ to the propositional variables.
 ```
 Denotational Semantics
 -------------------------------
-eval : formula → Interpretation → {true, false}
+eval : form → Interpretation → {true, false}
 eval〚T〛φ = true
 eval〚F〛φ = false
 eval〚v〛φ = φ(v)
