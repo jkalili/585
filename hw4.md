@@ -141,5 +141,4 @@ number values.<br>
 
 ```
 Tree = ℕ ∪ (Tree x Tree)
-Tree = {empty} ∪ (ℕ x Tree x Tree)
 ```
