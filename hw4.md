@@ -68,6 +68,10 @@ Command ::= ... | repeat Command until Expression<br>
 execute⟦repeat C until E⟧s = fix(λf. λs.
     let s' = execute⟦C⟧s in
         if evaluate⟦E⟧s' then s' else f(execute⟦C⟧s'))
+
+execute⟦repeat C until E⟧s = Y (λf.
+    let s' = execute⟦C⟧s in
+        if evaluate⟦E⟧s' then s' else f(execute⟦C⟧s'))
 ```
 
 b) conditional expression
